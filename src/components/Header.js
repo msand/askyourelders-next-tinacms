@@ -33,9 +33,12 @@ export default function Header(props) {
             padding: 1.5rem 1.25rem;
             border-bottom: 1px solid #ebebeb;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             flex-direction: row;
             align-items: center;
+          }
+          nav div {
+            padding: 1.5rem 1.25rem;
           }
           img {
             margin-bottom: 0;
@@ -55,6 +58,9 @@ export default function Header(props) {
               border-bottom: none;
               flex-direction: column;
               align-items: flex-start;
+            }
+            nav div {
+              padding: 2rem 0;
             }
           }
         `}
