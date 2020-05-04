@@ -1,10 +1,10 @@
 {
-	"name": "foresry-starter-blog-next",
+	"name": "askyourelders-next-tinacms",
 	"private": true,
-	"description": "A simple starter to get up and developing quickly with TinaCMS & Next",
+	"description": "Ask Your Elders is an initiative aiming to connect the people who have lived a full life with the young generations. ",
 	"license": "MIT",
 	"version": "0.1.0",
-	"author": "@kendallstraut",
+	"author": "@msand",
 	"scripts": {
 		"dev-next": "next src",
 		"dev": "node server.js",
@@ -47,6 +47,6 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kendallstrautman/brevifolia-next-tinacms"
+		"url": "https://github.com/msand/askyourelders-next-tinacms"
 	}
 }
