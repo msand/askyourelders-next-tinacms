@@ -131,7 +131,7 @@ export default function Add(props) {
         <div>
           <form
             method="POST"
-            action="/.netlify/functions/staticman/msand/askyourelers-next-tinacms/master/"
+            action="/.netlify/functions/staticman/msand/askyourelers-next-tinacms/master/comments"
           >
             <input
               name="options[redirect]"
