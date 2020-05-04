@@ -24,7 +24,7 @@
 		"express": "4.17.1",
 		"glob": "7.1.6",
 		"gray-matter": "4.0.2",
-		"moment": "2.24.0",
+		"moment": "2.25.3",
 		"next": "^9.0.6",
 		"next-tinacms-json": "0.3.5",
 		"next-tinacms-markdown": "0.2.5",
