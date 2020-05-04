@@ -26,7 +26,7 @@ function AddStoryForm() {
 	}
 
 	const handleSubmit = e => {
-		const data = { "form-name": "contact", name, email, message, file }
+		const data = { "form-name": "add", name, email, message, file }
 
 		fetch("/", {
 			method: "POST",
