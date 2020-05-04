@@ -52,7 +52,7 @@ export default function ThankYou(props) {
 	)
 }
 
-About.getInitialProps = async function() {
+ThankYou.getInitialProps = async function() {
 	const content = await import(`../data/thank_you.md`)
 	const config = await import(`../data/config.json`)
 	const data = matter(content.default)
