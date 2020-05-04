@@ -4,7 +4,7 @@ import { useLocalMarkdownForm } from 'next-tinacms-markdown'
 
 import Layout from '../components/Layout'
 
-export default function Info(props) {
+export default function About(props) {
 	const formOptions = {
 		fields: [
 			{
@@ -14,7 +14,7 @@ export default function Info(props) {
 			},
 			{
 				name: 'markdownBody',
-				label: 'Info Content',
+				label: 'About Content',
 				component: 'markdown'
 			}
 		]
@@ -23,27 +23,27 @@ export default function Info(props) {
 
 	return (
 		<Layout
-			pathname='info'
+			pathname='about'
 			bgColor={data.frontmatter.background_color}
 			siteTitle={props.title}
 		>
-			<section className='info_blurb'>
+			<section className='about_blurb'>
 				<ReactMarkdown source={data.markdownBody} />
 			</section>
 			<style jsx>{`
-				.info_blurb {
+				.about_blurb {
 					max-width: 800px;
 					padding: 1.5rem 1.25rem;
 				}
 
 				@media (min-width: 768px) {
-					.info_blurb {
+					.about_blurb {
 						padding: 2rem;
 					}
 				}
 
 				@media (min-width: 1440px) {
-					.info_blurb {
+					.about_blurb {
 						padding: 3rem;
 					}
 				}
@@ -52,14 +52,14 @@ export default function Info(props) {
 	)
 }
 
-Info.getInitialProps = async function() {
-	const content = await import(`../data/info.md`)
+About.getInitialProps = async function() {
+	const content = await import(`../data/about.md`)
 	const config = await import(`../data/config.json`)
 	const data = matter(content.default)
 
 	return {
 		markdownFile: {
-			fileRelativePath: `src/data/info.md`,
+			fileRelativePath: `src/data/about.md`,
 			frontmatter: data.data,
 			markdownBody: data.content
 		},

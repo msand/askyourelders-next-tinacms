@@ -13,11 +13,18 @@ export default function Header(props) {
         </Link>
         <div>
           <Link href={`${typeof window !== "undefined" &&
-          window.location.pathname == "/info" ?
-          "/" : "/info"}`}>
+          window.location.pathname == "/about" ?
+          "/" : "/about"}`}>
             <h1>{`${typeof window !== "undefined" &&
-          window.location.pathname == "/info" ?
-          "close" : "info"}`}</h1>
+          window.location.pathname == "/about" ?
+          "close" : "About"}`}</h1>
+          </Link>
+          <Link href={`${typeof window !== "undefined" &&
+          window.location.pathname == "/add" ?
+          "/" : "/add"}`}>
+            <h1>{`${typeof window !== "undefined" &&
+          window.location.pathname == "/add" ?
+          "close" : "Add your story"}`}</h1>
           </Link>
         </div>
       </nav>
