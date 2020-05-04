@@ -1,0 +1,3 @@
+allowedFields: ["name", "email", "message"]
+path: "src/posts/{@timestamp}-{@id}"
+format: "json"

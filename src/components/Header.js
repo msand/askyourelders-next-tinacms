@@ -32,6 +32,7 @@ export default function Header(props) {
         {`
           h1 {
             margin-bottom: 0;
+            font-family: 'Nanum Brush Script';
           }
           h1:hover {
             cursor: pointer;

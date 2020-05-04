@@ -11,7 +11,7 @@ export default function Meta(props) {
             </Head>
             <style jsx global>
                 {`
-                    @import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
+                    @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Nanum+Brush+Script&family=Work+Sans&display=swap');
 
                     * {
                     box-sizing: inherit;
