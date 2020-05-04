@@ -1052,10 +1052,10 @@
     final-form "^4.18.2"
     final-form-arrays "^3.0.1"
 
-"@tinacms/git-client@0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@tinacms/git-client/-/git-client-0.6.0.tgz#de8f937f1a6c4f9f48d5fc54b5ed9e193bef9fad"
-  integrity sha512-2cg8cLneNGuqtqGxIdL/nIvkRw82ovJrGWJYM5vAyHtTo5FBBLF03uF+IZ/Zor70M4Wmo9N6w5/CS/YEwzejMg==
+"@tinacms/git-client@0.6.7":
+  version "0.6.7"
+  resolved "https://registry.yarnpkg.com/@tinacms/git-client/-/git-client-0.6.7.tgz#88afb94c0f4d73cf929dff22c29976c7466f710a"
+  integrity sha512-VbrOZwFp8M7aLPNDPTtkNIxNlCCK1wWH+psbl8NSgAVsxJHRfV5XWXENUEHjS7iOYfnYOBcmaKe2WmHbIHq8MQ==
 
 "@tinacms/icons@^0.7.0":
   version "0.7.0"
