@@ -32,7 +32,7 @@ module.exports = {
       file
         .split('/')[2]
         .replace(/ /g, '-')
-        .slice(0, -3)
+        .slice(0, -5)
         .trim()
     )
 
