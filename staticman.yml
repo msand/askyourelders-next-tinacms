@@ -37,6 +37,11 @@ comments:
       options:
         format: "timestamp-seconds"
 
+  # Whether entries need to be appproved before they are published to the main
+  # branch. If set to `true`, a pull request will be created for your approval.
+  # Otherwise, entries will be published to the main branch automatically.
+  moderation: false
+
   # Name of the site. Used in notification emails.
   name: "askyourelders.org"
 
