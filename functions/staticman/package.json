@@ -6,6 +6,7 @@
   "author": "Prabashwara Seneviratne",
   "license": "ISC",
   "dependencies": {
+    "front-matter": "^3.1.0",
     "qs": "^6.9.1",
     "staticman": "eduardoboucas/staticman#2be29f7",
     "url-pattern": "^1.0.3"
