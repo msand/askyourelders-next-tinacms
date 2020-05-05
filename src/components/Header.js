@@ -1,41 +1,52 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function Header(props) {
   return (
     <header className="header">
-      <nav
-        className="nav"
-        role="navigation"
-        aria-label="main navigation"
-      >
+      <nav className="nav" role="navigation" aria-label="main navigation">
         <Link href="/">
           <h1>{props.siteTitle}</h1>
         </Link>
-        <div>
-          <Link href={`${typeof window !== "undefined" &&
-          window.location.pathname == "/about" ?
-          "/" : "/about"}`}>
-            <h1>{`${typeof window !== "undefined" &&
-          window.location.pathname == "/about" ?
-          "close" : "About"}`}</h1>
-          </Link>
-          <Link href={`${typeof window !== "undefined" &&
-          window.location.pathname == "/add" ?
-          "/" : "/add"}`}>
-            <h1>{`${typeof window !== "undefined" &&
-          window.location.pathname == "/add" ?
-          "close" : "Add your story"}`}</h1>
-          </Link>
-        </div>
+        <Link
+          href={`${
+            typeof window !== 'undefined' && window.location.pathname == '/add'
+              ? '/'
+              : '/add'
+          }`}
+        >
+          <h1>{`${
+            typeof window !== 'undefined' && window.location.pathname == '/add'
+              ? 'Close'
+              : 'Add a story'
+          }`}</h1>
+        </Link>
+        <p className="one-liner">{props.oneLiner}</p>
+        <Link
+          href={`${
+            typeof window !== 'undefined' &&
+            window.location.pathname == '/about'
+              ? '/'
+              : '/about'
+          }`}
+        >
+          <h1>{`${
+            typeof window !== 'undefined' &&
+            window.location.pathname == '/about'
+              ? 'Close'
+              : 'About'
+          }`}</h1>
+        </Link>
       </nav>
       <style jsx>
         {`
           h1 {
-            margin-bottom: 0;
             font-family: 'Nanum Brush Script';
           }
           h1:hover {
             cursor: pointer;
+          }
+          .one-liner {
+            font-family: 'Architects Daughter', sans-serif;
           }
           nav {
             padding: 1.5rem 1.25rem;
@@ -74,5 +85,5 @@ export default function Header(props) {
         `}
       </style>
     </header>
-  );
+  )
 }

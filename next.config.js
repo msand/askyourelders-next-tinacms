@@ -14,10 +14,12 @@ module.exports = {
       '/about': { page: '/about' },
       '/add': { page: '/add' },
     }
-    //get all .md files in the posts dir
+    // get all .{md, json} files in the posts dir
     const blogs = glob.sync('src/posts/**/*.md')
 
-    //remove path and extension to leave filename only
+    const posts = glob.sync('src/posts/**/*.json')
+
+    // remove path and extension to leave filename only
     const blogSlugs = blogs.map(file =>
       file
         .split('/')[2]
@@ -26,9 +28,21 @@ module.exports = {
         .trim()
     )
 
-    //add each blog to the routes obj
+    const postSlugs = posts.map(file =>
+      file
+        .split('/')[2]
+        .replace(/ /g, '-')
+        .slice(0, -3)
+        .trim()
+    )
+
+    // add each blog and post to the routes obj
     blogSlugs.forEach(blog => {
       routes[`/blog/${blog}`] = { page: '/blog/[slug]', query: { slug: blog } }
+    })
+
+    postSlugs.forEach(post => {
+      routes[`/post/${post}`] = { page: '/post/[slug]', query: { slug: post } }
     })
 
     return routes

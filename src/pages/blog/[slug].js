@@ -52,7 +52,8 @@ export default function BlogTemplate(props) {
 	}
 
 	return (
-		<Layout siteTitle={props.title}>
+		<Layout siteTitle={props.title}
+						oneLiner={props.oneLiner}>
 			<article className='blog'>
 				<figure className='blog__hero'>
 					<img
@@ -216,6 +217,7 @@ BlogTemplate.getInitialProps = async function(ctx) {
 			frontmatter: data.data,
 			markdownBody: data.content
 		},
-		title: config.default.title
+		title: config.default.title,
+		oneLiner: config.default.oneLiner,
 	}
 }

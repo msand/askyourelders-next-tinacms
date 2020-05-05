@@ -25,6 +25,7 @@ export default function ThankYou(props) {
 		<Layout
 			pathname='thank-you'
 			bgColor={data.frontmatter.background_color}
+			oneLiner={props.oneLiner}
 			siteTitle={props.title}
 		>
 			<section className='thank_you_blurb'>
@@ -63,6 +64,7 @@ ThankYou.getInitialProps = async function() {
 			frontmatter: data.data,
 			markdownBody: data.content
 		},
-		title: config.default.title
+		title: config.default.title,
+		oneLiner: config.default.oneLiner,
 	}
 }

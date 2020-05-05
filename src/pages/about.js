@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import { useLocalMarkdownForm } from 'next-tinacms-markdown'
 
 import Layout from '../components/Layout'
+import React from 'react'
 
 export default function About(props) {
 	const formOptions = {
@@ -25,6 +26,7 @@ export default function About(props) {
 		<Layout
 			pathname='about'
 			bgColor={data.frontmatter.background_color}
+			oneLiner={props.oneLiner}
 			siteTitle={props.title}
 		>
 			<section className='about_blurb'>
@@ -63,6 +65,7 @@ About.getInitialProps = async function() {
 			frontmatter: data.data,
 			markdownBody: data.content
 		},
-		title: config.default.title
+		title: config.default.title,
+		oneLiner: config.default.oneLiner,
 	}
 }

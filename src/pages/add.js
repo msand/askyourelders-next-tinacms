@@ -123,11 +123,11 @@ export default function Add(props) {
     <Layout
       pathname="add"
       bgColor={data.frontmatter.background_color}
+      oneLiner={props.oneLiner}
       siteTitle={props.title}
     >
       <section className="add_blurb">
         <ReactMarkdown source={data.markdownBody} />
-        <AddStoryForm />
         <div>
           <form
             method="POST"
@@ -189,5 +189,6 @@ Add.getInitialProps = async function() {
       markdownBody: data.content,
     },
     title: config.default.title,
+    oneLiner: config.default.oneLiner,
   }
 }
