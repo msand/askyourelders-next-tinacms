@@ -22,13 +22,14 @@ class MyApp extends App {
       <Tina cms={this.cms}>
         <Component {...pageProps} />
         <style jsx global>{`
-			      @font-face {
-			        font-family: 'Architects Daughter', cursive;
-			        font-display: swap;
-			      }
-				`}</style>
+          @font-face {
+            font-family: 'Architects Daughter', cursive;
+            font-display: swap;
+          }
+        `}</style>
       </Tina>
     )
   }
 }
+
 export default MyApp

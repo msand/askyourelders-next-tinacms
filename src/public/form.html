@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>Document</title>
 </head>
 
 <body>
-<form name="add" netlify method='post' enctype='multipart/form-data' action="/thank-you/">
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <textarea name="message"></textarea>
-    <input type="file" id="file" name="file" multiple>
+<form action="/thank-you/" enctype='multipart/form-data' method='post' name="add" netlify>
+  <input name="name" type="text"/>
+  <input name="email" type="email"/>
+  <textarea name="message"></textarea>
+  <input id="file" multiple name="file" type="file">
 </form>
 </body>
 

@@ -1,193 +1,86 @@
-import matter from 'gray-matter'
-import ReactMarkdown from 'react-markdown'
-import { useLocalMarkdownForm } from 'next-tinacms-markdown'
-import React, { useState, useCallback } from 'react'
-import { useDropzone } from 'react-dropzone'
-
-function AddStoryForm() {
-  const [name, setName] = useState('')
-  const [status, setStatus] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [file, setFile] = useState({})
-
-  const onDrop = useCallback(acceptedFiles => {
-    console.log(acceptedFiles)
-    setFile(acceptedFiles[0])
-  }, [])
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
-
-  const encode = data => {
-    const formData = new FormData()
-    Object.keys(data).forEach(k => {
-      formData.append(k, data[k])
-    })
-    return formData
-  }
-
-  const handleSubmit = e => {
-    const data = { 'form-name': 'add', name, email, message, file }
-
-    fetch('/', {
-      method: 'POST',
-      // headers: { "Content-Type": 'multipart/form-data; boundary=random' },
-      body: encode(data),
-    })
-      .then(() => setStatus('Form Submission Successful!!'))
-      .catch(error => setStatus('Form Submission Failed!'))
-
-    e.preventDefault()
-  }
-
-  const handleChange = e => {
-    const { name, value } = e.target
-    if (name === 'name') {
-      return setName(value)
-    }
-    if (name === 'email') {
-      return setEmail(value)
-    }
-    if (name === 'message') {
-      return setMessage(value)
-    }
-  }
-
-  return (
-    <div className="App">
-      <form onSubmit={handleSubmit} action="/thank-you/">
-        <p>
-          <label>
-            Your Name:{' '}
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email:{' '}
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message:{' '}
-            <textarea name="message" value={message} onChange={handleChange} />
-          </label>
-        </p>
-        <div {...getRootProps()}>
-          <input {...getInputProps()} />
-          {isDragActive ? (
-            <p>Drop the files here ...</p>
-          ) : (
-            <p>Drag 'n' drop some files here, or click to select files</p>
-          )}
-        </div>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
-      <h3>{status}</h3>
-    </div>
-  )
-}
-
+import React from 'react'
 import Layout from '../components/Layout'
 
 export default function Add(props) {
-  const formOptions = {
-    fields: [
-      {
-        name: 'frontmatter.background_color',
-        label: 'Background Color',
-        component: 'color',
-      },
-      {
-        name: 'markdownBody',
-        label: 'Add Content',
-        component: 'markdown',
-      },
-    ],
-  }
-  const [data] = useLocalMarkdownForm(props.markdownFile, formOptions)
-
   return (
-    <Layout
-      pathname="add"
-      bgColor={data.frontmatter.background_color}
-      oneLiner={props.oneLiner}
-      siteTitle={props.title}
-    >
+    <Layout pathname="add" oneLiner={props.oneLiner} siteTitle={props.title}>
       <section className="add_blurb">
-        <ReactMarkdown source={data.markdownBody} />
+        <h1>Add a story</h1>
         <div>
-          <form
-            method="POST"
-            action="/.netlify/functions/staticman/msand/askyourelders-next-tinacms/master/comments"
-          >
-            <input
-              name="options[redirect]"
-              type="hidden"
-              value="https://askyourelders.org"
-            />
+          <form method="POST" action="/.netlify/functions/staticman/msand/askyourelders-next-tinacms/master/comments">
+            <input name="options[redirect]" type="hidden" value="https://askyourelders.org" />
             <input name="options[slug]" type="hidden" value="{{ page.slug }}" />
             <label>
               Name
-              <input name="fields[name]" type="text" />
+              <input name="fields[name]" type="text" placeholder="Enter your name" />
             </label>
             <label>
               E-mail
-              <input name="fields[email]" type="email" />
+              <input name="fields[email]" type="email" placeholder="Enter your email address" />
             </label>
             <label>
               Message
-              <textarea name="fields[message]" />
+              <textarea name="fields[message]" placeholder="Enter your message" />
             </label>
-            <button type="submit">Go!</button>
+            <button type="submit">Submit</button>
           </form>
         </div>
       </section>
-      <style jsx>{`
-        .add_blurb {
-          max-width: 800px;
-          padding: 1.5rem 1.25rem;
-        }
-
-        @media (min-width: 768px) {
+      <style jsx>{
+        //language=CSS
+        `
           .add_blurb {
-            padding: 2rem;
+            max-width: 800px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 1.5rem 1.25rem;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
           }
-        }
+          button {
+            display: inline-block;
+            padding: 11px 20px;
+            border-radius: 3px;
+            background-color: #888;
+            -webkit-transition: background-color 200ms ease;
+            transition: background-color 200ms ease;
+            color: #fff;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            text-decoration: none;
+          }
 
-        @media (min-width: 1440px) {
-          .add_blurb {
-            padding: 3rem;
+          label {
+            display: block;
+            font-weight: bold;
           }
-        }
-      `}</style>
+          input,
+          textarea {
+            display: block;
+            width: 100%;
+            padding: 8px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333333;
+            vertical-align: middle;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            margin-bottom: 15px;
+            margin-top: 8px;
+            border-radius: 3px;
+            height: auto;
+          }
+        `
+      }</style>
     </Layout>
   )
 }
 
-Add.getInitialProps = async function() {
-  const content = await import(`../data/add.md`)
+Add.getInitialProps = async function () {
   const config = await import(`../data/config.json`)
-  const data = matter(content.default)
 
   return {
-    markdownFile: {
-      fileRelativePath: `src/data/add.md`,
-      frontmatter: data.data,
-      markdownBody: data.content,
-    },
     title: config.default.title,
     oneLiner: config.default.oneLiner,
   }

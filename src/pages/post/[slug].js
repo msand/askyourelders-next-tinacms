@@ -20,7 +20,7 @@ export default function PostTemplate(props) {
           <h3>{reformatDate(date)}</h3>
         </div>
         <div className="blog__body">
-          <ReactMarkdown source={message} />
+          <ReactMarkdown source={message}/>
         </div>
         <h2 className="blog__footer">Written By: {name}</h2>
       </article>

@@ -1,1 +1,7 @@
-{"_id":"6342a870-8e67-11ea-ba9a-8dd0f32a79fb","name":"Mikael Sand","email":"ca99dc62d44bb122e87dd2e8b4bd4324","message":"Testing 1, 2, 3","date":1588638529}
+{
+  "_id": "6342a870-8e67-11ea-ba9a-8dd0f32a79fb",
+  "name": "Mikael Sand",
+  "email": "ca99dc62d44bb122e87dd2e8b4bd4324",
+  "message": "Testing 1, 2, 3",
+  "date": 1588638529
+}

@@ -1,6 +1,6 @@
 ---
 title: about page
-background_color: '#AEC4BE'
+background_color: '#f0f0f0'
 ---
 # Ask Your Elders 
 
@@ -15,7 +15,7 @@ _Ask Your Elders_ is an initiative aiming to connect the people who had lived a
 5. Post your stories to our website or post them publicly to your social media profile adding #AskYourElders 
 6. Congratulations! You are contributing to the universal databank of human wisdom, experience and knowledge.
 
-We are offering you a couple of questions that might trigger particularly meaningful answers:
+Here's a few questions that might trigger particularly meaningful answers:
 
 * What was your life like when you were my age?
 * What do you wish to have known when you were young?
