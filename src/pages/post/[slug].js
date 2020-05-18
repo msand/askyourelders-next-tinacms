@@ -10,19 +10,20 @@ function reformatDate(fullDate) {
 
 export default function PostTemplate(props) {
   const { data } = props.jsonFile
-  const { name, message, date } = data
+  const { title, message, elder, name, date } = data
   return (
     <Layout siteTitle={props.title}
             oneLiner={props.oneLiner}>
       <article className="blog">
         <div className="blog__info">
-          <h1>{name}</h1>
+          <h1>{title}</h1>
           <h3>{reformatDate(date)}</h3>
         </div>
         <div className="blog__body">
           <ReactMarkdown source={message}/>
+          <h3 className="blog__footer">Elder: {elder}</h3>
+          <h5 className="blog__footer">Written By: {name}</h5>
         </div>
-        <h2 className="blog__footer">Written By: {name}</h2>
       </article>
       <style jsx>
         {`
@@ -65,6 +66,7 @@ export default function PostTemplate(props) {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            text-align: justify;
           }
           .blog__body a {
             padding-bottom: 1.5rem;

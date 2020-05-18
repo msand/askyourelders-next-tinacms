@@ -16,17 +16,18 @@ const PostList = (props) => {
   return (
     <>
       <ul className="list">
-        {posts.length > 1 &&
+        {posts.length > 0 &&
           posts.map((post) => (
             <Link key={post.slug} href={{ pathname: `/post/${post.slug}` }}>
               <a>
                 <li className="post-wrapper">
                   <div className="post__info">
-                    <h2>{post.document.data.name}</h2>
-                    <h3> {reformatDate(post.document.data.date)}</h3>
+                    <h2>{post.document.data.title}</h2>
+                    <h3>{post.document.data.name} - {reformatDate(post.document.data.date)}</h3>
                     <p>
                       <ReactMarkdown source={truncateSummary(post.document.data.message)} />
                     </p>
+                    <h3>{post.document.data.elder}</h3>
                   </div>
                 </li>
               </a>
