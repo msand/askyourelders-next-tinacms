@@ -28,30 +28,9 @@ export default function Layout(props) {
             </p>
             <div className="grey-rule" />
             <div className="social-link-group">
-              <a href="#" className="social-icon-link w-inline-block">
+              <a href="https://www.facebook.com/askyourelders/" className="social-icon-link w-inline-block">
                 <img
                   src="https://uploads-ssl.webflow.com/5eb02de08cf9c4112d826157/5eb02de09b2abe302f99dbe9_social-03.svg"
-                  width={25}
-                  alt=""
-                />
-              </a>
-              <a href="#" className="social-icon-link w-inline-block">
-                <img
-                  src="https://uploads-ssl.webflow.com/5eb02de08cf9c4112d826157/5eb02de09b2abe651199dc38_social-07.svg"
-                  width={25}
-                  alt=""
-                />
-              </a>
-              <a href="#" className="social-icon-link w-inline-block">
-                <img
-                  src="https://uploads-ssl.webflow.com/5eb02de08cf9c4112d826157/5eb02de09b2abe704f99dc81_social-18.svg"
-                  width={25}
-                  alt=""
-                />
-              </a>
-              <a href="#" className="social-icon-link w-inline-block">
-                <img
-                  src="https://uploads-ssl.webflow.com/5eb02de08cf9c4112d826157/5eb02de09b2abee45c99dbf6_social-09.svg"
                   width={25}
                   alt=""
                 />
