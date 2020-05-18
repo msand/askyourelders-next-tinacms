@@ -47,8 +47,8 @@ const Index = ({ jsonFile, allBlogs, allPosts }) => {
         <p>
           <em>Ask Your Elders</em> is a project connecting the people who have lived a full life with the young
           generations. In times of isolation, it is a way to approach our loved ones and create something meaningful.
-          With your help, the elders are able to participate in the modern way of sharing and even give birth to an
-          actual art creation. Let’s do it together!
+          With your help, the elders are able to participate in modern ways of sharing and even give rise to creation
+          of art. Let’s do it together!
           <br />
           <br />
           In the Ask Your Elders concert 11.6.2020, Barbora Silhanova (Barbora Xu) from the Global Music of the SibA,
