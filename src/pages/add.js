@@ -11,17 +11,33 @@ export default function Add(props) {
             <input name="options[redirect]" type="hidden" value="https://askyourelders.org" />
             <input name="options[slug]" type="hidden" value="{{ page.slug }}" />
             <label>
-              Name
+              Title
+              <input name="fields[title]" type="text" placeholder="Enter a title" />
+            </label>
+            <label>
+              Text
+              <textarea name="fields[message]" placeholder="Enter your message" style={{ minHeight: 120}} />
+            </label>
+            <label>
+              Elders name (optional)
+              <input name="fields[elder]" type="text" placeholder="Enter name of elder" />
+            </label>
+            <label>
+              Author (optional)
               <input name="fields[name]" type="text" placeholder="Enter your name" />
             </label>
             <label>
-              E-mail
+              E-mail (optional)
               <input name="fields[email]" type="email" placeholder="Enter your email address" />
             </label>
             <label>
-              Message
-              <textarea name="fields[message]" placeholder="Enter your message" />
+              <input name="fields[email]" type="checkbox" style={{ display: 'inline-block', width: 'auto' }} />
+              Agree to share story with humanity as open source{' '}
+              <a className="link" href="https://opensource.org/licenses/Apache-2.0">
+                Apache-2.0
+              </a>
             </label>
+            <br />
             <button type="submit">Submit</button>
           </form>
         </div>
@@ -29,14 +45,6 @@ export default function Add(props) {
       <style jsx>{
         //language=CSS
         `
-          .add_blurb {
-            max-width: 800px;
-            border-radius: 5px;
-            margin-bottom: 30px;
-            background-color: #fff;
-            padding: 1.5rem 1.25rem;
-            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
-          }
           button {
             display: inline-block;
             padding: 11px 20px;
