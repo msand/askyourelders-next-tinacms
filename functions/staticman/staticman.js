@@ -25,7 +25,7 @@ exports.handler = (event, context, callback) => {
     .then(() => {
       callback(null, {
         statusCode: 200,
-        body: 'Success. <a href="/">Go back to frontpage</a>',
+        body: '<body>Success. <a href="/">Go back to frontpage</a></body>',
       })
     })
     .catch((error) => {

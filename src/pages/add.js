@@ -12,11 +12,11 @@ export default function Add(props) {
             <input name="options[slug]" type="hidden" value="{{ page.slug }}" />
             <label>
               Title
-              <input name="fields[title]" type="text" placeholder="Enter a title" />
+              <input name="fields[title]" type="text" required={true} placeholder="Enter a title" />
             </label>
             <label>
               Text
-              <textarea name="fields[message]" placeholder="Enter your message" style={{ minHeight: 120}} />
+              <textarea name="fields[message]" required={true} placeholder="Enter your message" style={{ minHeight: 120}} />
             </label>
             <label>
               Elders name (optional)
