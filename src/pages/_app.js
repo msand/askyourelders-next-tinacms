@@ -2,6 +2,8 @@ import React from 'react'
 import App from 'next/app'
 import { Tina, TinaCMS } from 'tinacms'
 import { GitClient, GitMediaStore } from '@tinacms/git-client'
+import { DefaultSeo } from 'next-seo'
+import SEO from '../next-seo.config'
 
 class MyApp extends App {
   constructor() {
@@ -20,6 +22,7 @@ class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <Tina cms={this.cms}>
+        <DefaultSeo {...SEO} />
         <Component {...pageProps} />
         <style jsx global>{`
           @font-face {
