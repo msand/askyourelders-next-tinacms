@@ -4372,10 +4372,10 @@ next-tinacms-json@0.3.15:
   resolved "https://registry.yarnpkg.com/next-tinacms-json/-/next-tinacms-json-0.3.15.tgz#14c557e4a3058c31f7cfc987e37f24ddd4afbf86"
   integrity sha512-bSK9KgmPo/YMYxq/bSJ/QERUUZhPSaxYfUurVn2P63lxHdhGDDFYJwcMaNOFMwP69GZrfhE/+W7BjZWjeqg6fA==
 
-next-tinacms-markdown@0.2.15:
-  version "0.2.15"
-  resolved "https://registry.yarnpkg.com/next-tinacms-markdown/-/next-tinacms-markdown-0.2.15.tgz#ba271494e3b37f17242a3a22084ba390a015ab20"
-  integrity sha512-FsMaDk14zoM5oyhw8WTbHd0pG+wFfvWGh1B3d2rxnszhNoqrUSy/Hj2dcxCATDQfWrRWRnHTA2o+nsYYPcYu+g==
+next-tinacms-markdown@0.2.16:
+  version "0.2.16"
+  resolved "https://registry.yarnpkg.com/next-tinacms-markdown/-/next-tinacms-markdown-0.2.16.tgz#8c1b69c9b3f71d5607731450df9cfcd29766f4ef"
+  integrity sha512-t+Cmh27GFj/gIAbyjNhE78JDI9h66lzZhhMJf4juzrGXylbxX6C/VTBM9n4uQtw0Ug7y0tvwq2kV57Qkkhx1BA==
   dependencies:
     gray-matter "^4.0.2"
     js-yaml "^3.13.1"
