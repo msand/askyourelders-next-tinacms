@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
+import { FacebookIcon, FacebookShareButton } from 'react-share'
 
 const BlogList = (props) => {
   function truncateSummary(content) {
@@ -18,22 +19,31 @@ const BlogList = (props) => {
       <ul className="list">
         {posts.length > 0 &&
           posts.map((post) => (
-            <Link key={post.slug} href={{ pathname: `/blog/${post.slug}` }}>
-              <a>
-                <li className="post-wrapper">
-                  <div className="hero_image">
+            <li className="post-wrapper">
+              <div className="hero_image">
+                <Link key={post.slug} href={{ pathname: `/blog/${post.slug}` }}>
+                  <a>
                     <img src={post.document.data.hero_image} alt={post.document.data.hero_image} />
-                  </div>
-                  <div className="blog__info">
+                  </a>
+                </Link>
+                <FacebookShareButton url={`https://askyourelders.org/post/${post.slug}`}>
+                  <p style={{ alignItems: 'center', display: 'flex' }}>
+                    <FacebookIcon size={20} round={true} /> &nbsp;Share
+                  </p>
+                </FacebookShareButton>
+              </div>
+              <div className="blog__info">
+                <Link key={post.slug} href={{ pathname: `/blog/${post.slug}` }}>
+                  <a>
                     <h2>{post.document.data.title}</h2>
                     <h3> {reformatDate(post.document.data.date)}</h3>
                     <p>
                       <ReactMarkdown source={truncateSummary(post.document.content)} />
                     </p>
-                  </div>
-                </li>
-              </a>
-            </Link>
+                  </a>
+                </Link>
+              </div>
+            </li>
           ))}
       </ul>
       <style jsx>
@@ -55,6 +65,7 @@ const BlogList = (props) => {
             overflow: hidden;
             min-width: 160px;
             padding-right: 1.25rem;
+            display: grid;
           }
           .hero_image img {
             object-fit: contain;

@@ -29,6 +29,11 @@ class MyApp extends App {
             font-family: 'Architects Daughter', cursive;
             font-display: swap;
           }
+
+          .share button {
+            align-items: center;
+            display: flex;
+          }
         `}</style>
       </Tina>
     )

@@ -16,7 +16,12 @@ export default function Add(props) {
             </label>
             <label>
               Text
-              <textarea name="fields[message]" required={true} placeholder="Enter your message" style={{ minHeight: 120}} />
+              <textarea
+                name="fields[message]"
+                required={true}
+                placeholder="Enter your message"
+                style={{ minHeight: 120 }}
+              />
             </label>
             <label>
               Elders name (optional)
@@ -31,7 +36,12 @@ export default function Add(props) {
               <input name="fields[email]" type="email" placeholder="Enter your email address" />
             </label>
             <label>
-              <input name="fields[email]" type="checkbox" required={true} style={{ display: 'inline-block', width: 'auto' }} />
+              <input
+                name="fields[email]"
+                type="checkbox"
+                required={true}
+                style={{ display: 'inline-block', width: 'auto' }}
+              />
               Agree to share story with all of humanity under the open source{' '}
               <a className="link" href="https://opensource.org/licenses/Apache-2.0">
                 Apache-2.0 license

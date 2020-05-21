@@ -49,11 +49,12 @@ const Index = ({ jsonFile, allBlogs, allPosts }) => {
           generations. In times of isolation, it is a way to approach our loved ones and create something meaningful.
           With your help, the elders are able to participate in modern ways of sharing and even give rise to creation
           of art. Let’s do it together!
-          <br />
-          <br />
-          In the Ask Your Elders concert 11.6.2020, Barbora Silhanova (Barbora Xu) from the Global Music of the SibA,
+        </p>
+        <h2>Events</h2>
+        <p>
+          The first event will be the Ask Your Elders concert 11.6.2020, Barbora Silhanova (Barbora Xu) from the Global Music of the SibA,
           premieres newly composed pieces drawing from stories of the older generation posted with #askyourelders by the
-          larger public before 3.6.2020.
+          larger public before 5.6.2020.
         </p>
         <h3>
           <Link href="/about">

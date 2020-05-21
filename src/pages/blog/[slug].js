@@ -2,10 +2,60 @@ import * as React from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import { useLocalMarkdownForm } from 'next-tinacms-markdown'
+import {
+  EmailIcon,
+  EmailShareButton,
+  FacebookIcon,
+  FacebookShareButton,
+  InstapaperIcon,
+  InstapaperShareButton,
+  LineIcon,
+  LineShareButton,
+  LinkedinIcon,
+  LinkedinShareButton,
+  LivejournalIcon,
+  LivejournalShareButton,
+  MailruIcon,
+  MailruShareButton,
+  OKIcon,
+  OKShareButton,
+  PinterestIcon,
+  PinterestShareButton,
+  PocketIcon,
+  PocketShareButton,
+  RedditIcon,
+  RedditShareButton,
+  TelegramIcon,
+  TelegramShareButton,
+  TumblrIcon,
+  TumblrShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+  ViberIcon,
+  ViberShareButton,
+  VKIcon,
+  VKShareButton,
+  WeiboIcon,
+  WeiboShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+  WorkplaceIcon,
+  WorkplaceShareButton,
+} from 'react-share'
 
 import Layout from '../../components/Layout'
+import { NextSeo } from 'next-seo'
+import { description, title as site_name, url } from '../../data/config'
+
+function reformatDate(fullDate) {
+  const date = new Date(fullDate)
+  return date.toDateString().slice(4)
+}
+
+const truncate = (input) => (input.length > 170 ? `${input.substring(0, 160)}...` : input)
 
 export default function BlogTemplate(props) {
+  const { markdownFile, oneLiner, title, slug } = props
   const formOptions = {
     fields: [
       {
@@ -44,27 +94,109 @@ export default function BlogTemplate(props) {
     ],
   }
 
-  const [post] = useLocalMarkdownForm(props.markdownFile, formOptions)
-
-  function reformatDate(fullDate) {
-    const date = new Date(fullDate)
-    return date.toDateString().slice(4)
-  }
+  const [post] = useLocalMarkdownForm(markdownFile, formOptions)
+  const postUrl = `https://askyourelders.org/blog/${slug}`
+  const { markdownBody, frontmatter } = post
+  const seo_description = truncate(markdownBody || description)
 
   return (
-    <Layout siteTitle={props.title} oneLiner={props.oneLiner}>
+    <Layout siteTitle={title} oneLiner={oneLiner}>
+      <NextSeo
+        {...{
+          title,
+          description: seo_description,
+          canonical: postUrl,
+          openGraph: {
+            type: 'website',
+            url: postUrl,
+            title,
+            description: seo_description,
+            images: [
+              {
+                url: url + frontmatter.hero_image,
+              },
+              {
+                url: url + 'static/opengraph.png',
+                width: 1200,
+                height: 630,
+                alt: oneLiner,
+              },
+            ],
+            site_name,
+          },
+        }}
+      />
       <article className="blog">
         <figure className="blog__hero">
-          <img src={post.frontmatter.hero_image} alt={`blog_hero_${post.frontmatter.title}`} />
+          <img src={frontmatter.hero_image} alt={`blog_hero_${frontmatter.title}`} />
         </figure>
         <div className="blog__info">
-          <h1>{post.frontmatter.title}</h1>
-          <h3>{reformatDate(post.frontmatter.date)}</h3>
+          <h1>{frontmatter.title}</h1>
+          <h3>{reformatDate(frontmatter.date)}</h3>
         </div>
         <div className="blog__body">
-          <ReactMarkdown source={post.markdownBody} />
+          <ReactMarkdown source={markdownBody} />
         </div>
-        <h2 className="blog__footer">Written By: {post.frontmatter.author}</h2>
+        <h2 className="blog__footer">Written By: {frontmatter.author}</h2>
+        <div className="share">
+          <EmailShareButton url={postUrl}>
+            <EmailIcon size={32} round={true} /> &nbsp;Share
+          </EmailShareButton>
+          <FacebookShareButton url={postUrl}>
+            <FacebookIcon size={32} round={true} /> &nbsp;Share
+          </FacebookShareButton>
+          <InstapaperShareButton url={postUrl}>
+            <InstapaperIcon size={32} round={true} /> &nbsp;Share
+          </InstapaperShareButton>
+          <LineShareButton url={postUrl}>
+            <LineIcon size={32} round={true} /> &nbsp;Share
+          </LineShareButton>
+          <LinkedinShareButton url={postUrl}>
+            <LinkedinIcon size={32} round={true} /> &nbsp;Share
+          </LinkedinShareButton>
+          <LivejournalShareButton url={postUrl}>
+            <LivejournalIcon size={32} round={true} /> &nbsp;Share
+          </LivejournalShareButton>
+          <MailruShareButton url={postUrl}>
+            <MailruIcon size={32} round={true} /> &nbsp;Share
+          </MailruShareButton>
+          <OKShareButton url={postUrl}>
+            <OKIcon size={32} round={true} /> &nbsp;Share
+          </OKShareButton>
+          <PinterestShareButton url={postUrl}>
+            <PinterestIcon size={32} round={true} /> &nbsp;Share
+          </PinterestShareButton>
+          <PocketShareButton url={postUrl}>
+            <PocketIcon size={32} round={true} /> &nbsp;Share
+          </PocketShareButton>
+          <RedditShareButton url={postUrl}>
+            <RedditIcon size={32} round={true} /> &nbsp;Share
+          </RedditShareButton>
+          <TelegramShareButton url={postUrl}>
+            <TelegramIcon size={32} round={true} /> &nbsp;Share
+          </TelegramShareButton>
+          <TumblrShareButton url={postUrl}>
+            <TumblrIcon size={32} round={true} /> &nbsp;Share
+          </TumblrShareButton>
+          <TwitterShareButton url={postUrl}>
+            <TwitterIcon size={32} round={true} /> &nbsp;Share
+          </TwitterShareButton>
+          <ViberShareButton url={postUrl}>
+            <ViberIcon size={32} round={true} /> &nbsp;Share
+          </ViberShareButton>
+          <VKShareButton url={postUrl}>
+            <VKIcon size={32} round={true} /> &nbsp;Share
+          </VKShareButton>
+          <WeiboShareButton url={postUrl}>
+            <WeiboIcon size={32} round={true} /> &nbsp;Share
+          </WeiboShareButton>
+          <WhatsappShareButton url={postUrl}>
+            <WhatsappIcon size={32} round={true} /> &nbsp;Share
+          </WhatsappShareButton>
+          <WorkplaceShareButton url={postUrl}>
+            <WorkplaceIcon size={32} round={true} /> &nbsp;Share
+          </WorkplaceShareButton>
+        </div>
       </article>
       <style jsx>
         {`
@@ -107,6 +239,7 @@ export default function BlogTemplate(props) {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            text-align: justify;
           }
           .blog__body a {
             padding-bottom: 1.5rem;
@@ -213,6 +346,7 @@ BlogTemplate.getInitialProps = async function (ctx) {
       frontmatter: data.data,
       markdownBody: data.content,
     },
+    slug,
     title: config.default.title,
     oneLiner: config.default.oneLiner,
   }

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
+import { FacebookIcon, FacebookShareButton } from 'react-share'
 
 const PostList = (props) => {
   function truncateSummary(content) {
@@ -17,22 +18,32 @@ const PostList = (props) => {
     <>
       <ul className="list">
         {posts.length > 0 &&
-          posts.map((post) => (
-            <Link key={post.slug} href={{ pathname: `/post/${post.slug}` }}>
-              <a>
-                <li className="post-wrapper">
-                  <div className="post__info">
-                    <h2>{post.document.data.title}</h2>
-                    <h3>{post.document.data.name} - {reformatDate(post.document.data.date)}</h3>
-                    <p>
-                      <ReactMarkdown source={truncateSummary(post.document.data.message)} />
+          posts
+            .slice()
+            .reverse()
+            .map((post) => (
+              <li className="post-wrapper">
+                <div className="post__info">
+                  <Link key={post.slug} href={{ pathname: `/post/${post.slug}` }}>
+                    <a>
+                      <h2>{post.document.data.title}</h2>
+                      <h3>
+                        {post.document.data.name} - {reformatDate(post.document.data.date)}
+                      </h3>
+                      <p>
+                        <ReactMarkdown source={truncateSummary(post.document.data.message)} />
+                      </p>
+                      <h3>{post.document.data.elder}</h3>
+                    </a>
+                  </Link>
+                  <FacebookShareButton url={`https://askyourelders.org/post/${post.slug}`}>
+                    <p style={{ alignItems: 'center', display: 'flex' }}>
+                      <FacebookIcon size={20} round={true} /> &nbsp;Share
                     </p>
-                    <h3>{post.document.data.elder}</h3>
-                  </div>
-                </li>
-              </a>
-            </Link>
-          ))}
+                  </FacebookShareButton>
+                </div>
+              </li>
+            ))}
       </ul>
       <style jsx>
         {`

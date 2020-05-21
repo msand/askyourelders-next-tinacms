@@ -11,6 +11,9 @@ export default function Header(props) {
           <Link href="/about">
             <h1 className={props.pathname === 'about' ? 'selected' : ''}>About</h1>
           </Link>
+          <Link href="/events">
+            <h1 className={props.pathname === 'events' ? 'selected' : ''}>Events</h1>
+          </Link>
         </section>
         <Link href="/add">
           <h1 className={props.pathname === 'add' ? 'selected' : ''}>Add a story</h1>
