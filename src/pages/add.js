@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import { url } from '../data/config'
 
 export default function Add(props) {
   return (
@@ -8,7 +9,7 @@ export default function Add(props) {
         <h1>Add a story</h1>
         <div>
           <form method="POST" action="/.netlify/functions/staticman/msand/askyourelders-next-tinacms/master/comments">
-            <input name="options[redirect]" type="hidden" value="https://askyourelders.org" />
+            <input name="options[redirect]" type="hidden" value={url} />
             <input name="options[slug]" type="hidden" value="{{ page.slug }}" />
             <label>
               Title

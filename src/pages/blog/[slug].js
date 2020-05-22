@@ -95,7 +95,7 @@ export default function BlogTemplate(props) {
 
   const { markdownFile, oneLiner, slug } = props
   const [post] = useLocalMarkdownForm(markdownFile, formOptions)
-  const postUrl = `https://askyourelders.org/blog/${slug}`
+  const postUrl = url + `/blog/${slug}`
   const { markdownBody, frontmatter } = post
   const { title } = frontmatter
   const seo_title = short + title
@@ -117,7 +117,7 @@ export default function BlogTemplate(props) {
                 url: url + frontmatter.hero_image,
               },
               {
-                url: url + 'static/opengraph.png',
+                url: url + '/static/opengraph.png',
                 width: 1200,
                 height: 630,
                 alt: oneLiner,

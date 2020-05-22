@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import { FacebookIcon, FacebookShareButton } from 'react-share'
+import { url } from '../data/config'
 
 const PostList = (props) => {
   function truncateSummary(content) {
@@ -36,7 +37,7 @@ const PostList = (props) => {
                       <h3>{post.document.data.elder}</h3>
                     </a>
                   </Link>
-                  <FacebookShareButton url={`https://askyourelders.org/post/${post.slug}`}>
+                  <FacebookShareButton url={url + `/post/${post.slug}`}>
                     <p style={{ alignItems: 'center', display: 'flex' }}>
                       <FacebookIcon size={20} round={true} /> &nbsp;Share
                     </p>

@@ -11,7 +11,7 @@ export default {
     description,
     images: [
       {
-        url: url + 'static/opengraph.png',
+        url: url + '/static/opengraph.png',
         width: 1200,
         height: 630,
         alt: oneLiner,

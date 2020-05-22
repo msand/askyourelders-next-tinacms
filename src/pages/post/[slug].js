@@ -57,7 +57,7 @@ export default function PostTemplate(props) {
     jsonFile: { data },
     slug,
   } = props
-  const postUrl = `https://askyourelders.org/post/${slug}`
+  const postUrl = url + `/post/${slug}`
   const { message, elder, name, date, title } = data
   const seo_title = short + title
   const seo_description = truncate(message || description)
@@ -75,7 +75,7 @@ export default function PostTemplate(props) {
             description: seo_description,
             images: [
               {
-                url: url + 'static/opengraph.png',
+                url: url + '/static/opengraph.png',
                 width: 1200,
                 height: 630,
                 alt: oneLiner,
