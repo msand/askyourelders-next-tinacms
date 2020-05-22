@@ -4364,7 +4364,7 @@ neo-async@2.6.1, neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-next-seo@^4.5.0:
+next-seo@4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-4.5.0.tgz#d000d4fec1ee02fd7bf458bfc20c334035027939"
   integrity sha512-PqLKaEOBHieXSxXDt++kG/XyJgi4X9N36PzmEBdJpJGkJdnqmdplFMZtz/kjuJJUg3iaVaUg/TAnRDjOROEX4A==
@@ -5590,7 +5590,7 @@ react-refresh@0.8.2:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.2.tgz#24bb0858eac92b0d7b0dd561747f0c9fd6c60327"
   integrity sha512-n8GXxo3DwM2KtFEL69DAVhGc4A1THn2qjmfvSo3nze0NLCoPbywazeJPqdp0RdSGLmyhQzeyA+XPXOobbYlkzg==
 
-react-share@^4.1.0:
+react-share@4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/react-share/-/react-share-4.1.0.tgz#45cbed5ddcbb24504143bcfc0e9b8a729ce274e0"
   integrity sha512-4/XqVBC+hreniU08zkzAkOGC3FPdJhcLzt1QCdybsZPd5ieUS++iChEEptvNoksiJ5NxbI2VRoDY9ovLAGl7GQ==
