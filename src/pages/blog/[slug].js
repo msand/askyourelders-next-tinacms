@@ -1,5 +1,6 @@
 import * as React from 'react'
 import matter from 'gray-matter'
+import { NextSeo } from 'next-seo'
 import ReactMarkdown from 'react-markdown'
 import { useLocalMarkdownForm } from 'next-tinacms-markdown'
 import {
@@ -44,8 +45,7 @@ import {
 } from 'react-share'
 
 import Layout from '../../components/Layout'
-import { NextSeo } from 'next-seo'
-import { description, title as site_name, url } from '../../data/config'
+import { description, title as site_name, url, short } from '../../data/config'
 
 function reformatDate(fullDate) {
   const date = new Date(fullDate)
@@ -55,7 +55,6 @@ function reformatDate(fullDate) {
 const truncate = (input) => (input.length > 170 ? `${input.substring(0, 160)}...` : input)
 
 export default function BlogTemplate(props) {
-  const { markdownFile, oneLiner, title, slug } = props
   const formOptions = {
     fields: [
       {
@@ -94,22 +93,24 @@ export default function BlogTemplate(props) {
     ],
   }
 
+  const { markdownFile, oneLiner, slug } = props
   const [post] = useLocalMarkdownForm(markdownFile, formOptions)
   const postUrl = `https://askyourelders.org/blog/${slug}`
   const { markdownBody, frontmatter } = post
+  const { title } = frontmatter
+  const seo_title = short + title
   const seo_description = truncate(markdownBody || description)
-
   return (
-    <Layout siteTitle={title} oneLiner={oneLiner}>
+    <Layout siteTitle={site_name} oneLiner={oneLiner}>
       <NextSeo
         {...{
-          title,
+          title: seo_title,
           description: seo_description,
           canonical: postUrl,
           openGraph: {
             type: 'website',
             url: postUrl,
-            title,
+            title: seo_title,
             description: seo_description,
             images: [
               {

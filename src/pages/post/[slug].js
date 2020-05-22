@@ -1,50 +1,49 @@
 import * as React from 'react'
-import ReactMarkdown from 'react-markdown'
-
 import { NextSeo } from 'next-seo'
+import ReactMarkdown from 'react-markdown'
+import {
+  EmailIcon,
+  EmailShareButton,
+  FacebookIcon,
+  FacebookShareButton,
+  InstapaperIcon,
+  InstapaperShareButton,
+  LineIcon,
+  LineShareButton,
+  LinkedinIcon,
+  LinkedinShareButton,
+  LivejournalIcon,
+  LivejournalShareButton,
+  MailruIcon,
+  MailruShareButton,
+  OKIcon,
+  OKShareButton,
+  PinterestIcon,
+  PinterestShareButton,
+  PocketIcon,
+  PocketShareButton,
+  RedditIcon,
+  RedditShareButton,
+  TelegramIcon,
+  TelegramShareButton,
+  TumblrIcon,
+  TumblrShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+  ViberIcon,
+  ViberShareButton,
+  VKIcon,
+  VKShareButton,
+  WeiboIcon,
+  WeiboShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+  WorkplaceIcon,
+  WorkplaceShareButton,
+} from 'react-share'
 
 import Layout from '../../components/Layout'
-import { description, oneLiner, title as site_name } from '../../data/config'
-import {
-  EmailShareButton,
-  FacebookShareButton,
-  InstapaperShareButton,
-  LineShareButton,
-  LinkedinShareButton,
-  LivejournalShareButton,
-  MailruShareButton,
-  OKShareButton,
-  PinterestShareButton,
-  PocketShareButton,
-  RedditShareButton,
-  TelegramShareButton,
-  TumblrShareButton,
-  TwitterShareButton,
-  ViberShareButton,
-  VKShareButton,
-  WeiboShareButton,
-  WhatsappShareButton,
-  WorkplaceShareButton,
-  EmailIcon,
-  FacebookIcon,
-  InstapaperIcon,
-  LineIcon,
-  LinkedinIcon,
-  LivejournalIcon,
-  MailruIcon,
-  OKIcon,
-  PinterestIcon,
-  PocketIcon,
-  RedditIcon,
-  TelegramIcon,
-  TumblrIcon,
-  TwitterIcon,
-  ViberIcon,
-  VKIcon,
-  WeiboIcon,
-  WhatsappIcon,
-  WorkplaceIcon,
-} from 'react-share'
+import { description, oneLiner, title as site_name, url, short } from '../../data/config'
 
 function reformatDate(fullDate) {
   const date = new Date(fullDate * 1000)
@@ -54,22 +53,25 @@ function reformatDate(fullDate) {
 const truncate = (input) => (input.length > 170 ? `${input.substring(0, 160)}...` : input)
 
 export default function PostTemplate(props) {
-  const { jsonFile, slug } = props
-  const { data } = jsonFile
-  const { title, message, elder, name, date } = data
-  const url = `https://askyourelders.org/post/${slug}`
+  const {
+    jsonFile: { data },
+    slug,
+  } = props
+  const postUrl = `https://askyourelders.org/post/${slug}`
+  const { message, elder, name, date, title } = data
+  const seo_title = short + title
   const seo_description = truncate(message || description)
   return (
     <Layout siteTitle={site_name} oneLiner={oneLiner}>
       <NextSeo
         {...{
-          title,
+          title: seo_title,
           description: seo_description,
-          canonical: url,
+          canonical: postUrl,
           openGraph: {
             type: 'website',
-            url: url,
-            title,
+            url: postUrl,
+            title: seo_title,
             description: seo_description,
             images: [
               {
@@ -94,61 +96,61 @@ export default function PostTemplate(props) {
           <h5 className="blog__footer">Written By: {name}</h5>
         </div>
         <div className="share">
-          <EmailShareButton url={url}>
+          <EmailShareButton url={postUrl}>
             <EmailIcon size={32} round={true} /> &nbsp;Share
           </EmailShareButton>
-          <FacebookShareButton url={url}>
+          <FacebookShareButton url={postUrl}>
             <FacebookIcon size={32} round={true} /> &nbsp;Share
           </FacebookShareButton>
-          <InstapaperShareButton url={url}>
+          <InstapaperShareButton url={postUrl}>
             <InstapaperIcon size={32} round={true} /> &nbsp;Share
           </InstapaperShareButton>
-          <LineShareButton url={url}>
+          <LineShareButton url={postUrl}>
             <LineIcon size={32} round={true} /> &nbsp;Share
           </LineShareButton>
-          <LinkedinShareButton url={url}>
+          <LinkedinShareButton url={postUrl}>
             <LinkedinIcon size={32} round={true} /> &nbsp;Share
           </LinkedinShareButton>
-          <LivejournalShareButton url={url}>
+          <LivejournalShareButton url={postUrl}>
             <LivejournalIcon size={32} round={true} /> &nbsp;Share
           </LivejournalShareButton>
-          <MailruShareButton url={url}>
+          <MailruShareButton url={postUrl}>
             <MailruIcon size={32} round={true} /> &nbsp;Share
           </MailruShareButton>
-          <OKShareButton url={url}>
+          <OKShareButton url={postUrl}>
             <OKIcon size={32} round={true} /> &nbsp;Share
           </OKShareButton>
-          <PinterestShareButton url={url}>
+          <PinterestShareButton url={postUrl}>
             <PinterestIcon size={32} round={true} /> &nbsp;Share
           </PinterestShareButton>
-          <PocketShareButton url={url}>
+          <PocketShareButton url={postUrl}>
             <PocketIcon size={32} round={true} /> &nbsp;Share
           </PocketShareButton>
-          <RedditShareButton url={url}>
+          <RedditShareButton url={postUrl}>
             <RedditIcon size={32} round={true} /> &nbsp;Share
           </RedditShareButton>
-          <TelegramShareButton url={url}>
+          <TelegramShareButton url={postUrl}>
             <TelegramIcon size={32} round={true} /> &nbsp;Share
           </TelegramShareButton>
-          <TumblrShareButton url={url}>
+          <TumblrShareButton url={postUrl}>
             <TumblrIcon size={32} round={true} /> &nbsp;Share
           </TumblrShareButton>
-          <TwitterShareButton url={url}>
+          <TwitterShareButton url={postUrl}>
             <TwitterIcon size={32} round={true} /> &nbsp;Share
           </TwitterShareButton>
-          <ViberShareButton url={url}>
+          <ViberShareButton url={postUrl}>
             <ViberIcon size={32} round={true} /> &nbsp;Share
           </ViberShareButton>
-          <VKShareButton url={url}>
+          <VKShareButton url={postUrl}>
             <VKIcon size={32} round={true} /> &nbsp;Share
           </VKShareButton>
-          <WeiboShareButton url={url}>
+          <WeiboShareButton url={postUrl}>
             <WeiboIcon size={32} round={true} /> &nbsp;Share
           </WeiboShareButton>
-          <WhatsappShareButton url={url}>
+          <WhatsappShareButton url={postUrl}>
             <WhatsappIcon size={32} round={true} /> &nbsp;Share
           </WhatsappShareButton>
-          <WorkplaceShareButton url={url}>
+          <WorkplaceShareButton url={postUrl}>
             <WorkplaceIcon size={32} round={true} /> &nbsp;Share
           </WorkplaceShareButton>
         </div>
