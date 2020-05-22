@@ -276,7 +276,7 @@ export default function Meta(props) {
               box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
             }
 
-            a.link {
+            .link a, a.link {
               color: #0574e4;
               text-decoration: underline;
             }

@@ -20,9 +20,9 @@ const BlogList = (props) => {
       <ul className="list">
         {posts.length > 0 &&
           posts.map((post) => (
-            <li className="post-wrapper">
+            <li key={post.slug} className="post-wrapper">
               <div className="hero_image">
-                <Link key={post.slug} href={{ pathname: `/blog/${post.slug}` }}>
+                <Link href={{ pathname: `/blog/${post.slug}` }}>
                   <a>
                     <img src={post.document.data.hero_image} alt={post.document.data.hero_image} />
                   </a>

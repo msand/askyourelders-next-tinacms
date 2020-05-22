@@ -2,42 +2,58 @@
 {}
 ---
 
-_Ask Your Elders_ is a project connecting the people who have lived a full life with the young generations. In times of isolation, it is a way to approach our loved ones and create something meaningful. With your help, the elders are able to participate in modern ways of sharing and even give rise to creation of art. Let’s do it together!
+_Ask Your Elders_ is a project created with the purpose of connecting those who have lived a full life with younger generations and bringing their stories and wisdom into the future. In this time of isolation, let us create something meaningful together!
 
-In the _Ask Your Elders_ concert 11.6.2020, Barbora Silhanova (Barbora Xu) from the Global Music of the SibA, premieres newly composed pieces drawing from stories of the older generation posted with #askyourelders by the larger public before 5.6.2020.
+Moreover, your stories and experiences--and those of your loved ones-- can become inspiration for artists around the world!
 
-How to take part in the project? It is easy!
+All submissions received by June 5th, 2020, may inspire new music presented of June 11th, 2020 by singer and instrumentalist Barbora Xu from the Sibelius Academy of Arts, Helsinki.
 
-1. Pick up your phone
+**How can you take part in the project, you ask?**
 
-2. Prepare a notebook or any kind of recording device
+1. Pick up your phone…
 
-   It is important to be able to take notes when you are asking deep questions. The answers may be more complex than we expect.
+2. Prepare a notebook or any kind of recording device and...
 
-3. Call your elders!
+   **NOTE: _It is important to be able to take notes when you are asking deep questions. The answers may be more complex than expected._**
 
-   You can call your grandparents, parents, distant relatives or older friends... They have a lot more to share than we might ever imagine!
+3. Call your elders! It’s as simple as that!
 
-4. Ask your elders
+   Call your grandparents, your parents, distant relatives or older friends--even someone _else’s_ grandparents!
 
-   Ask them about things you are pondering about, ask their advice, ask them to tell you a story. Ask them anything or just let them speak and listen deeply. If you want to record the call, ask them for permission in advance.
+4. Then..._ask them to share._
 
-   We are offering you a couple of questions that might trigger particularly meaningful answers:
+   - Ask them to tell you stories from their lives
+   - Ask them to tell you stories from their childhood or their elders
+   - Ask about particularly meaningful events in their lives
+   - Discuss subjects you have been pondering and ask their advice
+   - Really...ask them _anything_, or just let them speak and listen deeply.
 
-   - What was your life like when you were my age?
-   - What do you wish to have known when you were young?
-   - What are the things young people may regret in the future?
-   - What questions should we answer for ourselves in order to lead a happier life?
-   - How have you overcome the most difficult periods of your life?
-   - What were the important pieces of advice you got from your elders/parents/family?
-   - Do you have any motto or most important value to live by?
+   **NOTE: **It is important that if you want to record the call, ask them for permission in advance.
 
-5. Post the story, thought, observation
+5. Submit these stories!
 
-   You can post on Instagram or other social media using #askyourelders. You can also submit your post directly on [www.askyourelders.org](http://www.askyourelders.org)
+   The stories, advice and thoughts you submit to the _Ask Your Elders_ website will be gathered and woven together to create a global, virtual library which artists from all around the world will draw on to create new artwork inspired by our elders! It’s simple--you can post your experiences directly onto [www.askyourelders.org](http://www.askyourelders.org) at any time, anonymously or sharing your name! If you wish to share these stories and experiences but would rather they remained unused by global artists, you can post to Facebook, Instagram or any other social media platform using #askyourelders.
 
-   What should the format of your post be? You can share one sentence or a whole essay, the format is free. You can also share a poem, a song, a picture, be creative! It is important to remember that the stories might be meant only for you, or for all of us. Ask your elder for permission to share their personal story. Even if it was not to be shared with the world, you can still cherish it in your own memories and thoughts.
+   It is important to remember that the stories might be meant only for you, or for all of us. Ask your elder for permission to share their personal story. Even if it was not to be shared with the world, you can still cherish it in your own memories and thoughts.
+
+    **Want to get involved, but unsure how to begin? **
+    
+    _Here are a handful of possible questions that might inspire particularly meaningful answers:_
+      
+     _ What was your life like when you were my age?
+    _ What do you wish you had known when you were young?
+    _ What do you feel younger generations may regret in the future?
+    _ What questions could we ask ourselves in order to lead a happier life?
+    _ How have you overcome the most difficult periods of your life?
+    _ What were the important pieces of advice you got from your elders/parents/family? \* Do you have a motto or most important set of values you live by?
+    
+    **What type of text to share?**
+    
+    You can share one sentence or a whole essay, the format is free.
+    
+    You can also share a poem, a song, a picture, be creative!
 
 6. Congratulations, you have contributed to the open library of the wisdom of our elders!
 
-   The posts shared with #askyourelders before 8th of June 2020 will be an inspiration for new pieces premiering at the Feel Helsinki Ask Your Elders Live Stream Concert. Posts shared after 8th of June may be an inspiration for future artistic projects.
+
+The posts shared at [www.askyourelders.org](www.askyourelders.org) before 5th of June 2020 will be an inspiration for new pieces premiering at the Feel Helsinki Ask Your Elders Live Stream Concert 11.6.2020 19h, Finnish time. Posts shared after this date will act as inspiration for future art projects. Any posts shared on any social platform with #askyourelders will be a part of the project but are not to be used as a base for artistic works directly.

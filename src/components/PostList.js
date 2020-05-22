@@ -23,9 +23,9 @@ const PostList = (props) => {
             .slice()
             .reverse()
             .map((post) => (
-              <li className="post-wrapper">
+              <li key={post.slug} className="post-wrapper">
                 <div className="post__info">
-                  <Link key={post.slug} href={{ pathname: `/post/${post.slug}` }}>
+                  <Link href={{ pathname: `/post/${post.slug}` }}>
                     <a>
                       <h2>{post.document.data.title}</h2>
                       <h3>

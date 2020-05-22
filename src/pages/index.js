@@ -39,22 +39,31 @@ const Index = ({ jsonFile, allBlogs, allPosts }) => {
       <a href="#stories" className="link" style={{ float: 'right' }}>
         Jump to latest stories
       </a>
-      <div className="w-richtext">
+      <div className="w-richtext link">
         <h1>
           Ask Your Elders&nbsp;
           <br />
         </h1>
         <p>
-          <em>Ask Your Elders</em> is a project connecting the people who have lived a full life with the young
-          generations. In times of isolation, it is a way to approach our loved ones and create something meaningful.
-          With your help, the elders are able to participate in modern ways of sharing and even give rise to creation
-          of art. Let’s do it together!
+          <em>Ask Your Elders</em> is a project created with the purpose of connecting those who have lived a full life
+          with younger generations and bringing their stories and wisdom into the future. In this time of isolation, let
+          us create something meaningful together!
         </p>
         <h2>Events</h2>
         <p>
-          The first event will be the Ask Your Elders concert 11.6.2020, Barbora Silhanova (Barbora Xu) from the Global Music of the SibA,
-          premieres newly composed pieces drawing from stories of the older generation posted with #askyourelders by the
-          larger public before 5.6.2020.
+          On June 11th, 2020, <a href="https://barboraxu.com/">Barbora Silhanova (Barbora Xu)</a>, a student of Global
+          Music studying at the Sibelius Academy in Finland will premier newly composed pieces for a{' '}
+          special Ask Your Elders concert: <a href="https://youtu.be/6nPvts4oYRE">https://youtu.be/6nPvts4oYRE</a>.
+          These pieces will draw inspiration from stories shared by elder generations and you through
+          www.askyourelders.org.
+        </p>
+        <p>
+          For your stories and experiences--and those of your loved ones--to be submitted as inspiration for the
+          upcoming concert, all submissions must be received by June 5th, 2020.
+        </p>
+        <p>
+          The kick-off event for collecting stories was at 21.5.2020 with a recording of the live video available here:{' '}
+          <a href="https://youtu.be/ZI4WBnQQzws">https://youtu.be/ZI4WBnQQzws</a>
         </p>
         <h3>
           <Link href="/about">
