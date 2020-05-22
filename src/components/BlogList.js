@@ -26,7 +26,7 @@ const BlogList = (props) => {
                     <img src={post.document.data.hero_image} alt={post.document.data.hero_image} />
                   </a>
                 </Link>
-                <FacebookShareButton url={`https://askyourelders.org/post/${post.slug}`}>
+                <FacebookShareButton url={`https://askyourelders.org/blog/${post.slug}`}>
                   <p style={{ alignItems: 'center', display: 'flex' }}>
                     <FacebookIcon size={20} round={true} /> &nbsp;Share
                   </p>
