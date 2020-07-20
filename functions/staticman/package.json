@@ -8,7 +8,7 @@
   "dependencies": {
     "front-matter": "^4.0.0",
     "qs": "^6.9.1",
-    "staticman": "eduardoboucas/staticman#2be29f7",
+    "staticman": "eduardoboucas/staticman#5d7ed77",
     "url-pattern": "^1.0.3"
   }
 }
