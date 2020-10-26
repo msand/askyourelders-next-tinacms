@@ -31,7 +31,7 @@
 		"next-tinacms-json": "0.3.16",
 		"next-tinacms-markdown": "0.2.16",
 		"prop-types": "15.7.2",
-		"raw-loader": "4.0.1",
+		"raw-loader": "4.0.2",
 		"react": "16.13.1",
 		"react-dom": "16.13.1",
 		"react-dropzone": "11.0.1",
