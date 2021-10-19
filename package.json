@@ -18,7 +18,7 @@
 		"postinstall": "cd functions/staticman && yarn"
 	},
 	"dependencies": {
-		"@tinacms/api-git": "0.7.0",
+		"@tinacms/api-git": "0.42.1",
 		"@tinacms/git-client": "0.6.7",
 		"cors": "2.8.5",
 		"dotenv": "8.2.0",
