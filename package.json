@@ -29,7 +29,7 @@
 		"next": "9.4.2",
 		"next-seo": "4.5.0",
 		"next-tinacms-json": "0.3.16",
-		"next-tinacms-markdown": "0.2.16",
+		"next-tinacms-markdown": "0.51.0",
 		"prop-types": "15.7.2",
 		"raw-loader": "4.0.1",
 		"react": "16.13.1",
