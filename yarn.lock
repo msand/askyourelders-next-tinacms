@@ -4379,10 +4379,10 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next-tinacms-json@0.3.16:
-  version "0.3.16"
-  resolved "https://registry.yarnpkg.com/next-tinacms-json/-/next-tinacms-json-0.3.16.tgz#9036f1012e4011fe79a9dadb8b1359a5a6a74054"
-  integrity sha512-c+eEvSIBUSR79n187vVmarXZku1KPg44SiXYyNWlYfV/JW81fD23aXQ8nAGmpDUs50Qc8WJIzWmOi8Z7Gx5Ufw==
+next-tinacms-json@0.51.0:
+  version "0.51.0"
+  resolved "https://registry.yarnpkg.com/next-tinacms-json/-/next-tinacms-json-0.51.0.tgz#0fa54f40c0604ad2f72244464dcaaecb979b4ae8"
+  integrity sha512-psgJg3StBx/3wQvE0oq9+Fo6cCqfZzuN7MJabJ+eUZemq2fylmKNygoqySm4+kfnGZF5yKDIlv2lUFW/Trdo2g==
 
 next-tinacms-markdown@0.2.16:
   version "0.2.16"
