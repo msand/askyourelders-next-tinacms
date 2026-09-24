@@ -37,7 +37,7 @@
 		"react-dropzone": "11.0.1",
 		"react-markdown": "4.3.1",
 		"react-share": "4.1.0",
-		"styled-components": "5.1.0",
+		"styled-components": "5.3.11",
 		"tinacms": "0.19.4",
 		"typescript": "3.9.3",
 		"webpack": "4.43.0"
